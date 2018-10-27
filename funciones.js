@@ -23,10 +23,49 @@ for (var i = 0; i<semana.length;i++){//EJEMPLO DE OPERADORES LOGICOS "FOR"
 }
 
 for (var dia in semana){//EJEMPLO DE OPERADORES LOGICOS "FOR IN"
-    if (!cumple);{
+    if (!cumple){
         console.log(dia);
         console.log(semana[dia]);
+    }else{
+        console.log("Si cumple");
     }
-    else {console.log("No cumple")}
 }
 
+function suma(){
+var n1=12;
+var n2=34;
+var res=n1+n2;
+console.log("la suma es:" +res);//concatena con el +
+}
+suma();
+
+function resta(val1, val2){
+    console.log(val1-val2);
+}
+resta(1234-5678);
+
+
+
+var cadena="En un lugar de la mancha de cuyo nombre no quiero acordarme...";
+var letras = cadena.split("");
+var resultado = "";
+for(i in letras){
+    if (letras[i]=='a'){
+        continue;
+    }else{
+        resultado+=letras[i];
+    }
+}
+console.log(resultado)
+
+var parrafos = document.getElementsByTagName("p");
+console.log(parrafos);
+parrafos[1].innerText="Nuevo Texto";
+var mimensaje = document.getElementById("mensaje");
+console.log(mimensaje);
+mimensaje.style.background="grey";
+
+function refrescarvalor(){
+    var entrada=document.getElementById("entrada");
+    mimensaje.innerHTML=entrada.value;
+}
